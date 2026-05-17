@@ -1,19 +1,40 @@
 'use client'
 
-import { useState } from 'react'
-import { profile } from '@/data/profile'
+import { useState, useTransition } from 'react'
+import { submitContactAction } from '@/app/actions/contact'
 import { Send } from 'lucide-react'
 
 export function ContactForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [isPending, startTransition] = useTransition()
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
+    if (!name.trim() || !email.trim() || !message.trim()) return
+    startTransition(async () => {
+      await submitContactAction({ name: name.trim(), email: email.trim(), message: message.trim() })
+      setSubmitted(true)
+    })
+  }
+
+  if (submitted) {
+    return (
+      <div className="flex flex-col gap-3 py-8">
+        <p className="text-base font-semibold text-foreground">Message received!</p>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          I&apos;ll get back to you within 24 hours. Check your inbox for a confirmation email.
+        </p>
+        <button
+          onClick={() => { setSubmitted(false); setName(''); setEmail(''); setMessage('') }}
+          className="mt-2 self-start text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
+        >
+          Send another message
+        </button>
+      </div>
+    )
   }
 
   return (
@@ -65,10 +86,11 @@ export function ContactForm() {
       <div>
         <button
           type="submit"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity"
+          disabled={isPending || !name.trim() || !email.trim() || !message.trim()}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-foreground text-background text-sm font-medium hover:opacity-90 disabled:opacity-40 transition-opacity"
         >
           <Send size={14} />
-          Send Message
+          {isPending ? 'Sending…' : 'Send Message'}
         </button>
       </div>
     </form>
