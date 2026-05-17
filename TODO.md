@@ -54,9 +54,9 @@ Based on workspace analysis across all projects — this is what you actually us
 
 ## Phase 4 — Nice to Have
 
-- [ ] Blog/articles section (Markdown files in `content/`)
-- [ ] Analytics (Plausible)
-- [ ] Light/dark toggle persisted via `localStorage`
+- [x] Blog/articles section — 4 articles in `content/articles/`, static SSG at `/blog` and `/blog/[slug]`
+- [ ] Analytics (Plausible or Vercel Analytics — needs site ID)
+- [x] Light/dark toggle persisted via `localStorage` — done in Phase 1 (ThemeProvider)
 
 ## Profile (from CV — source of truth: `data/profile.ts`)
 
