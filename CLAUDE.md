@@ -43,13 +43,14 @@ portfolio/
 └── styles/       # Global styles
 ```
 
-## Commands (once initialized)
+## Commands
 
 ```bash
-npm run dev       # Start development server
+npm run dev       # Start dev server on http://localhost:3010
 npm run build     # Production build
 npm run lint      # ESLint
 npm run start     # Start production server
+npm run test      # Run Vitest
 ```
 
 ## Portfolio Sections
