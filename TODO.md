@@ -26,11 +26,13 @@ Based on workspace analysis across all projects — this is what you actually us
 
 ## Phase 1 — Scaffold (Week 1)
 
-- [ ] `npx create-next-app@latest . --typescript --tailwind --app --src-dir`
-- [ ] Install shadcn/ui: `npx shadcn@latest init` (style: `base-nova`, base color: `neutral`)
-- [ ] Install Lucide React and Geist font
-- [ ] Set up CSS variables in `app/globals.css` matching the pattern from freelancer-copilot
-- [ ] Configure dark mode toggle (`.dark` class on `<html>`)
+- [x] Scaffold Next.js 16 + TypeScript + TailwindCSS v4 + App Router (manual, create-next-app blocked by existing files)
+- [x] Install Lucide React, Geist font, clsx, tailwind-merge, tw-animate-css, Recharts
+- [x] Set up CSS variables in `app/globals.css` (semantic tokens, dark/light mode)
+- [x] `app/layout.tsx` with Geist font + FOUC prevention script
+- [x] `lib/utils.ts` with `cn()` helper
+- [x] `components.json` for shadcn/ui (style: `base-nova`, base color: `neutral`)
+- [ ] Run `npx shadcn@latest add` for needed components as sections are built
 - [ ] Deploy empty shell to Vercel and connect GitHub repo
 
 ## Phase 2 — Core Sections (Week 1-2)
