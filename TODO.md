@@ -37,7 +37,7 @@ Based on workspace analysis across all projects — this is what you actually us
 
 ## Phase 2 — Core Sections (Week 1-2)
 
-- [ ] **Hero section** — name, title, one-liner, links (GitHub, LinkedIn, Upwork, Email)
+- [x] **Hero section** — name, title, one-liner, links (GitHub, LinkedIn, Upwork, Email)
 - [ ] **Skills section** — categorized: Backend / Cloud & DevOps / Database / Frontend
 - [ ] **Featured Projects** — 3 cards (Freelancer Copilot, Payment System, Cloud Monitoring)
   - Each card: problem, stack badges, architecture note, links (GitHub + live)

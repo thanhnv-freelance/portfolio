@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -38,7 +40,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full bg-background text-foreground font-sans">
-        {children}
+        <ThemeProvider>
+          <header className="fixed top-0 right-0 p-4 z-50">
+            <ThemeToggle />
+          </header>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
