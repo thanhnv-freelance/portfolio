@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { Code2, Briefcase, Globe, Mail, FileDown, BookOpen } from 'lucide-react'
+import { Code2, Briefcase, Globe, Mail, FileDown } from 'lucide-react'
 import { profile } from '@/data/profile'
 
 const links = [
@@ -78,13 +77,6 @@ export function Hero() {
           <FileDown size={15} />
           Resume
         </a>
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium text-foreground hover:bg-subtle transition-colors"
-        >
-          <BookOpen size={15} />
-          Blog
-        </Link>
       </div>
     </section>
   )

@@ -10,16 +10,10 @@ export default function BlogPage() {
   const articles = getAllArticles()
 
   return (
-    <main className="px-6 sm:px-12 lg:px-24 py-24 max-w-4xl mx-auto w-full">
-      <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-3">
+    <main className="px-6 sm:px-12 lg:px-24 pt-24 pb-24 max-w-4xl mx-auto w-full">
+      <h1 className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-12">
         Writing
-      </p>
-      <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-        Engineering Articles
       </h1>
-      <p className="text-sm text-muted-foreground mb-12 max-w-xl">
-        Deep-dives on backend systems, PostgreSQL performance, distributed architecture, and lessons from production incidents.
-      </p>
 
       <div className="flex flex-col divide-y divide-border">
         {articles.map((article) => (

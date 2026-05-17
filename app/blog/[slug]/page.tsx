@@ -23,7 +23,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) notFound()
 
   return (
-    <main className="px-6 sm:px-12 lg:px-24 py-24 max-w-3xl mx-auto w-full">
+    <main className="px-6 sm:px-12 lg:px-24 pt-24 pb-24 max-w-3xl mx-auto w-full">
       {/* Back */}
       <Link
         href="/blog"

@@ -24,20 +24,10 @@ export const metadata = {
 
 export default function WorkspacePage() {
   return (
-    <main className="px-6 sm:px-12 lg:px-24 py-24 max-w-4xl mx-auto w-full">
-      <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-3">
-        Developer Reference
-      </p>
-      <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
+    <main className="px-6 sm:px-12 lg:px-24 pt-24 pb-24 max-w-4xl mx-auto w-full">
+      <h1 className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-12">
         Local App Registry
       </h1>
-      <p className="text-sm text-muted-foreground mb-12 max-w-xl">
-        Central port map for all local dev servers in the workspace. Update{' '}
-        <code className="font-mono text-xs bg-subtle px-1.5 py-0.5 rounded">
-          data/workspace.ts
-        </code>{' '}
-        when adding a new app.
-      </p>
 
       <div className="flex flex-col gap-3">
         {workspaceApps.map((app) => (

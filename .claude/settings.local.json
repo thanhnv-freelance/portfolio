@@ -16,7 +16,9 @@
       "Bash(grep -r \"\"dev\"\" /Users/ThanhNguyen/AI_WS/*/package.json /Users/ThanhNguyen/AI_WS/*/*/package.json)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:portfolio-jade-kappa-64.vercel.app)",
+      "WebFetch(domain:thanh.dev)"
     ]
   }
 }
