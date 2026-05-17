@@ -32,17 +32,16 @@ Based on workspace analysis across all projects — this is what you actually us
 - [x] `app/layout.tsx` with Geist font + FOUC prevention script
 - [x] `lib/utils.ts` with `cn()` helper
 - [x] `components.json` for shadcn/ui (style: `base-nova`, base color: `neutral`)
-- [ ] Run `npx shadcn@latest add` for needed components as sections are built
-- [ ] Deploy empty shell to Vercel and connect GitHub repo
+- [x] shadcn components — not needed for Phase 2; all sections built with plain Tailwind
+- [x] Deployed to Vercel: https://portfolio-jade-kappa-64.vercel.app/
 
 ## Phase 2 — Core Sections (Week 1-2)
 
 - [x] **Hero section** — name, title, one-liner, links (GitHub, LinkedIn, Upwork, Email)
-- [ ] **Skills section** — categorized: Backend / Cloud & DevOps / Database / Frontend
-- [ ] **Featured Projects** — 3 cards (Freelancer Copilot, Payment System, Cloud Monitoring)
-  - Each card: problem, stack badges, architecture note, links (GitHub + live)
-- [ ] **Experience summary** — 5+ years, banking/payments/remittance/cloud domains
-- [ ] **Contact section** — CTA for freelance/contract
+- [x] **Skills section** — categorized: Backend / Cloud & DevOps / Databases / System Design
+- [x] **Featured Projects** — 3 cards with problem, description, tech badges, status, links
+- [x] **Experience summary** — 5 roles, timeline layout, highlights per role
+- [x] **Contact section** — CTA with email + LinkedIn CTA, copyright footer
 
 ## Phase 3 — Polish (Week 2-3)
 
