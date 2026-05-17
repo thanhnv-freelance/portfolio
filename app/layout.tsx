@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Thanh Nguyen — Full-Stack Engineer",
+  title: "Nguyen Van Thanh — Senior Backend & Cloud Engineer",
   description:
-    "Full-Stack Engineer specializing in scalable backend systems, cloud-native applications, and API integrations using Java, Spring Boot, AWS, and Next.js.",
+    "Senior Backend & Cloud Engineer with 10+ years building large-scale distributed systems for banking, fintech, and enterprise platforms. Specialized in Spring Boot microservices, AWS, payment systems, and event-driven architecture.",
 };
 
 export default function RootLayout({

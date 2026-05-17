@@ -3,22 +3,22 @@ import { Code2, Briefcase, Globe, Mail } from 'lucide-react'
 const links = [
   {
     label: 'GitHub',
-    href: 'https://github.com/thanhnguyen',
+    href: 'https://github.com/thanhnv2210',
     icon: Code2,
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/thanhnguyen',
+    href: 'https://linkedin.com/in/thanhnv2210',
     icon: Briefcase,
   },
   {
     label: 'Upwork',
-    href: 'https://upwork.com/freelancers/thanhnguyen',
+    href: 'https://upwork.com/freelancers/thanhnv2210',
     icon: Globe,
   },
   {
     label: 'Email',
-    href: 'mailto:hello@thanhnguyen.dev',
+    href: 'mailto:thanhnv1022@gmail.com',
     icon: Mail,
   },
 ]
@@ -36,23 +36,22 @@ export function Hero() {
 
       {/* Name */}
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-        Thanh Nguyen
+        Nguyen Van Thanh
       </h1>
 
       {/* Title */}
       <p className="mt-3 text-lg sm:text-xl font-mono text-muted-foreground">
-        Full-Stack Engineer · Cloud &amp; Architecture
+        Senior Backend &amp; Cloud Engineer
       </p>
 
       {/* Bio */}
       <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-        I build scalable backend systems, cloud-native applications, and API
-        integrations — specializing in{' '}
-        <span className="text-foreground font-medium">Java, Spring Boot</span>,{' '}
-        <span className="text-foreground font-medium">AWS</span>, and{' '}
-        <span className="text-foreground font-medium">Next.js</span>.
-        5+ years delivering production systems for banking, payments, and
-        remittance platforms.
+        10+ years designing and building large-scale distributed systems for
+        banking, fintech, and enterprise platforms. Specialized in{' '}
+        <span className="text-foreground font-medium">Spring Boot microservices</span>,{' '}
+        <span className="text-foreground font-medium">AWS</span>, high-volume{' '}
+        <span className="text-foreground font-medium">payment &amp; remittance systems</span>,
+        and event-driven architectures.
       </p>
 
       {/* Links */}

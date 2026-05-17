@@ -58,10 +58,19 @@ Based on workspace analysis across all projects — this is what you actually us
 - [ ] Analytics (Plausible)
 - [ ] Light/dark toggle persisted via `localStorage`
 
-## Project Data to Prepare
+## Profile (from CV — source of truth: `data/profile.ts`)
 
-Write these up before building the UI — drop into `data/projects.ts`:
+- **Name**: Nguyen Van Thanh
+- **Title**: Senior Backend & Cloud Engineer
+- **Experience**: 10+ years
+- **Email**: thanhnv1022@gmail.com | **Phone**: +65 8433 8479
+- **LinkedIn**: linkedin.com/in/thanhnv2210
+- **Current**: Singtel / NCS, Singapore (2022 – Present)
 
-1. **Freelancer Copilot** — AI-assisted proposal/scope drafting tool (Next.js 16, Drizzle ORM, Anthropic Claude, PostgreSQL)
-2. **Payment / Remittance System** — enterprise backend for async transaction processing, audit logging, API integrations (Spring Boot 3, WebFlux, R2DBC, PostgreSQL)
-3. **Cloud Monitoring Dashboard** — platform engineering / observability (FastAPI, PostgreSQL, pgvector, AWS)
+## Project Data (`data/profile.ts`)
+
+1. **Freelancer Copilot** *(in-progress)* — Next.js, PostgreSQL, OpenAI API
+2. **Cross-Border Remittance Platform** *(production)* — Java, Spring Boot, AWS, PostgreSQL
+3. **Banking BPM Loan Platform** *(production)* — Java, Spring Boot, BPM, Oracle
+
+> GitHub/Upwork URLs are placeholders — update once confirmed.

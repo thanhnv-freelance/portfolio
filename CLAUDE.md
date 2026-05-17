@@ -4,7 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal engineering portfolio for Thanh Nguyen — a Full-Stack Engineer specializing in backend systems, cloud-native applications, and API integrations. The portfolio targets technical clients (startups, engineering managers, technical founders) and emphasizes engineering depth over visual flair.
+Portfolio for **Nguyen Van Thanh** — Senior Backend & Cloud Engineer, 10+ years experience.
+Contact: thanhnv1022@gmail.com | LinkedIn: linkedin.com/in/thanhnv2210
+Target audience: technical clients (startups, engineering managers, technical founders) needing backend/cloud/payments expertise.
+Emphasis: engineering depth, systems thinking — not visual flair.
+
+Source of truth for all profile data: `data/profile.ts`
 
 ## Tech Stack (confirmed from workspace patterns)
 
