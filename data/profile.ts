@@ -4,7 +4,7 @@ export const profile = {
   email: 'thanhnv1022@gmail.com',
   phone: '+65 8433 8479',
   linkedin: 'https://linkedin.com/in/thanhnv2210',
-  github: 'https://github.com/thanhnv2210',
+  github: 'https://github.com/thanhnv-freelance',
   upwork: 'https://upwork.com/freelancers/thanhnv2210',
   summary:
     '10+ years designing and building large-scale distributed systems for banking, fintech, and enterprise platforms. Specialized in Spring Boot microservices, AWS, high-volume payment & remittance systems, and event-driven architectures.',
