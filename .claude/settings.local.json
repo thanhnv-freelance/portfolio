@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/ThanhNguyen/AI_WS -maxdepth 3 -name *.toml -o -name requirements.txt -o -name pyproject.toml -o -name Cargo.toml -o -name pom.xml -o -name build.gradle)",
+      "Bash(find /Users/ThanhNguyen/AI_WS -maxdepth 4 -name *.css)",
+      "Bash(find /Users/ThanhNguyen/AI_WS/sugar-advisor-app -maxdepth 3 -name *.gradle -o -name *.xml)",
+      "Bash(find /Users/ThanhNguyen/AI_WS/english-learning-app -maxdepth 4 -name package.json -not -path */node_modules/*)",
+      "Bash(xargs cat:*)"
+    ]
+  }
+}
