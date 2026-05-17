@@ -5,7 +5,7 @@ import { profile } from '@/data/profile'
 const links = [
   {
     label: 'GitHub',
-    href: 'https://github.com/thanhnv2210',
+    href: 'https://github.com/thanhnv-freelance',
     icon: Code2,
   },
   {
