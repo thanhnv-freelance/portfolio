@@ -62,6 +62,9 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-padding-top: 3.5rem; /* height of fixed navbar */
+  }
   body {
     @apply bg-background text-foreground;
   }

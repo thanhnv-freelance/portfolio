@@ -27,7 +27,7 @@ const links = [
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 max-w-4xl mx-auto w-full">
+    <section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 max-w-4xl mx-auto w-full pt-14">
       {/* Availability badge */}
       <div className="mb-8">
         <span className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground border border-border rounded-full px-3 py-1">
