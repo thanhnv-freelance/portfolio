@@ -1,47 +1,12 @@
 import { profile } from '@/data/profile'
-import { Mail, Phone, Briefcase, Code2, Globe, MapPin, Clock } from 'lucide-react'
+import { ContactForm } from '@/components/contact-form'
+import { Mail, Phone, Briefcase, Code2, Globe, MapPin } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact — Nguyen Van Thanh',
   description: 'Get in touch for freelance or contract backend and cloud engineering work.',
 }
-
-const contactItems = [
-  {
-    label: 'Email',
-    value: profile.email,
-    href: `mailto:${profile.email}`,
-    icon: Mail,
-  },
-  {
-    label: 'Phone',
-    value: profile.phone,
-    href: `tel:${profile.phone.replace(/\s/g, '')}`,
-    icon: Phone,
-  },
-  {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/thanhnv2210',
-    href: profile.linkedin,
-    icon: Briefcase,
-    external: true,
-  },
-  {
-    label: 'GitHub',
-    value: 'github.com/thanhnv-freelance',
-    href: profile.github,
-    icon: Code2,
-    external: true,
-  },
-  {
-    label: 'Upwork',
-    value: 'upwork.com/freelancers/thanhnv2210',
-    href: profile.upwork,
-    icon: Globe,
-    external: true,
-  },
-]
 
 export default function ContactPage() {
   return (
@@ -50,43 +15,78 @@ export default function ContactPage() {
         Contact
       </h1>
 
-      <div className="flex flex-col gap-6 max-w-2xl">
-        {/* Availability */}
-        <div className="border border-border rounded-xl p-6 sm:p-8 bg-card flex flex-col gap-4">
-          <p className="text-base font-semibold text-foreground">Availability</p>
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
-              {profile.availability}
-            </div>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <MapPin size={14} className="shrink-0" />
-              Singapore
-            </div>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Clock size={14} className="shrink-0" />
-              UTC+8 — open to remote collaboration across timezones
-            </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 items-start">
+        {/* Left: form */}
+        <div className="flex flex-col gap-6">
+          <div>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Get in Touch</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Looking for backend, cloud, or system design expertise? Send me a message and I&apos;ll
+              get back to you.
+            </p>
           </div>
+          <ContactForm />
         </div>
 
-        {/* Contact links */}
-        <div className="border border-border rounded-xl p-6 sm:p-8 bg-card flex flex-col gap-4">
-          <p className="text-base font-semibold text-foreground">Reach out</p>
+        {/* Right: contact info */}
+        <div className="flex flex-col gap-8">
+          {/* Direct contact */}
           <div className="flex flex-col gap-3">
-            {contactItems.map(({ label, value, href, icon: Icon, external }) => (
-              <a
-                key={label}
-                href={href}
-                target={external ? '_blank' : undefined}
-                rel={external ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors group"
-              >
-                <Icon size={15} className="shrink-0" />
-                <span className="font-mono text-xs w-16 shrink-0 text-faint">{label}</span>
-                <span className="group-hover:underline underline-offset-2">{value}</span>
-              </a>
-            ))}
+            <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              Direct
+            </p>
+            <a
+              href={`mailto:${profile.email}`}
+              className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Mail size={14} className="shrink-0" />
+              {profile.email}
+            </a>
+            <a
+              href={`tel:${profile.phone.replace(/\s/g, '')}`}
+              className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Phone size={14} className="shrink-0" />
+              {profile.phone}
+            </a>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <MapPin size={14} className="shrink-0" />
+              Singapore (UTC+8)
+            </div>
+          </div>
+
+          {/* Social */}
+          <div className="flex flex-col gap-3">
+            <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              Online
+            </p>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Briefcase size={14} className="shrink-0" />
+              linkedin.com/in/thanhnv2210
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Code2 size={14} className="shrink-0" />
+              github.com/thanhnv-freelance
+            </a>
+            <a
+              href={profile.upwork}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Globe size={14} className="shrink-0" />
+              Upwork profile
+            </a>
           </div>
         </div>
       </div>

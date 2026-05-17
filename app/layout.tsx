@@ -62,10 +62,17 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full bg-background text-foreground font-sans">
+      <body className="min-h-full bg-background text-foreground font-sans flex flex-col">
         <ThemeProvider>
           <Navbar />
-          {children}
+          <div className="flex-1">
+            {children}
+          </div>
+          <footer className="border-t border-border px-6 sm:px-12 lg:px-24 py-6 max-w-4xl mx-auto w-full">
+            <p className="text-xs font-mono text-muted-foreground">
+              &copy; {new Date().getFullYear()} Nguyen Van Thanh. All rights reserved.
+            </p>
+          </footer>
         </ThemeProvider>
         <Analytics />
       </body>

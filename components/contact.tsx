@@ -45,9 +45,6 @@ export function Contact() {
         </Link>
       </div>
 
-      <p className="mt-16 text-xs font-mono text-faint">
-        &copy; {new Date().getFullYear()} Nguyen Van Thanh
-      </p>
     </section>
   )
 }

@@ -5,9 +5,8 @@ import { usePathname } from 'next/navigation'
 import { ThemeToggle } from '@/components/theme-toggle'
 
 const navLinks = [
-  { label: 'About', href: '/#about' },
+  { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Experience', href: '/#experience' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -28,7 +27,9 @@ export function Navbar() {
         <div className="flex items-center gap-1">
           {navLinks.map(({ label, href }) => {
             const isActive =
-              href === '/projects'
+              href === '/about'
+                ? pathname === '/about'
+                : href === '/projects'
                 ? pathname === '/projects'
                 : href === '/contact'
                 ? pathname === '/contact'
