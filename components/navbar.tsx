@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Projects', href: '/projects' },
   { label: 'Experience', href: '/#experience' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export function Navbar() {
@@ -29,6 +30,8 @@ export function Navbar() {
             const isActive =
               href === '/projects'
                 ? pathname === '/projects'
+                : href === '/contact'
+                ? pathname === '/contact'
                 : href === '/blog'
                 ? pathname.startsWith('/blog')
                 : false

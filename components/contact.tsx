@@ -1,5 +1,6 @@
+import Link from 'next/link'
 import { profile } from '@/data/profile'
-import { Mail, Briefcase } from 'lucide-react'
+import { Mail, Briefcase, ArrowRight } from 'lucide-react'
 
 export function Contact() {
   return (
@@ -34,6 +35,14 @@ export function Contact() {
             LinkedIn
           </a>
         </div>
+
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          Full contact details
+          <ArrowRight size={14} />
+        </Link>
       </div>
 
       <p className="mt-16 text-xs font-mono text-faint">

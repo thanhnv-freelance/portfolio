@@ -13,10 +13,6 @@ export default function HomePage() {
         <Hero />
       </div>
       <div className="border-t border-border" />
-      <div id="skills">
-        <Skills />
-      </div>
-      <div className="border-t border-border" />
       <div id="projects">
         <Projects />
         <div className="px-6 sm:px-12 lg:px-24 pb-16 max-w-4xl mx-auto w-full -mt-10">
@@ -33,6 +29,11 @@ export default function HomePage() {
       <div id="experience">
         <Experience />
       </div>
+      <div className="border-t border-border" />
+      <div id="skills">
+        <Skills />
+      </div>
+      <div className="border-t border-border" />
       <Contact />
     </main>
   )
