@@ -1,5 +1,6 @@
 import { projects } from '@/data/profile'
-import { Code2, Globe, ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
+import { Code2, Globe } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export function Projects() {
@@ -74,6 +75,19 @@ export function Projects() {
             <p className="text-sm text-foreground leading-relaxed">
               {project.description}
             </p>
+
+            {/* Architecture screenshot */}
+            {project.image && (
+              <div className="rounded-lg overflow-hidden border border-border">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} architecture`}
+                  width={800}
+                  height={400}
+                  className="w-full object-cover"
+                />
+              </div>
+            )}
 
             {/* Tech stack */}
             <div className="flex flex-wrap gap-2">

@@ -22,7 +22,7 @@ export function Contact() {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <Mail size={15} />
-            {profile.email}
+            Get in touch
           </a>
           <a
             href={profile.linkedin}

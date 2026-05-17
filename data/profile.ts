@@ -9,6 +9,7 @@ export const profile = {
   summary:
     '10+ years designing and building large-scale distributed systems for banking, fintech, and enterprise platforms. Specialized in Spring Boot microservices, AWS, high-volume payment & remittance systems, and event-driven architectures.',
   availability: 'Available for freelance & contract',
+  resume: '/resume.pdf',
 }
 
 export const skills = {
@@ -85,6 +86,7 @@ export const projects = [
     tech: ['Next.js', 'PostgreSQL', 'OpenAI API'],
     github: 'https://github.com/thanhnv2210/freelancer-copilot',
     live: null,
+    image: null, // add: '/images/projects/freelancer-copilot.png'
   },
   {
     slug: 'remittance-platform',
@@ -95,6 +97,7 @@ export const projects = [
     tech: ['Java', 'Spring Boot', 'AWS', 'PostgreSQL'],
     github: null,
     live: null,
+    image: null, // add: '/images/projects/remittance-platform.png'
   },
   {
     slug: 'banking-bpm',
@@ -105,5 +108,6 @@ export const projects = [
     tech: ['Java', 'Spring Boot', 'BPM', 'Oracle'],
     github: null,
     live: null,
+    image: null, // add: '/images/projects/banking-bpm.png'
   },
 ]

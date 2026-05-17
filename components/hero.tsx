@@ -1,4 +1,5 @@
-import { Code2, Briefcase, Globe, Mail } from 'lucide-react'
+import { Code2, Briefcase, Globe, Mail, FileDown } from 'lucide-react'
+import { profile } from '@/data/profile'
 
 const links = [
   {
@@ -68,6 +69,14 @@ export function Hero() {
             {label}
           </a>
         ))}
+        <a
+          href={profile.resume}
+          download
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium text-foreground hover:bg-subtle transition-colors"
+        >
+          <FileDown size={15} />
+          Resume
+        </a>
       </div>
     </section>
   )

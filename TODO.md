@@ -45,11 +45,12 @@ Based on workspace analysis across all projects — this is what you actually us
 
 ## Phase 3 — Polish (Week 2-3)
 
-- [ ] Add architecture diagrams or screenshots per project
-- [ ] Write strong project descriptions (systems-thinking framing, not feature lists)
-- [ ] Mobile responsiveness audit
-- [ ] Add downloadable resume link
-- [ ] Add `og:image` and basic meta tags for social sharing
+- [ ] Add architecture diagrams/screenshots — drop PNGs into `public/images/projects/`, set `image` field in `data/profile.ts`
+- [x] Strong project descriptions — problem-focused framing already in `data/profile.ts`
+- [x] Mobile responsiveness — contact button fixed, unused imports removed, flex-wrap on all link rows
+- [x] Downloadable resume — Resume button in hero, drop PDF at `public/resume.pdf`
+- [x] `og:image` — dynamic `ImageResponse` at `/opengraph-image`
+- [x] Meta tags — full `openGraph` + `twitter` + `robots` in `layout.tsx`
 
 ## Phase 4 — Nice to Have
 
