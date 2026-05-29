@@ -78,6 +78,17 @@ export const experience = [
 
 export const projects = [
   {
+    slug: 'ai-operations-portal',
+    title: 'AI Operations Portal',
+    status: 'production' as const,
+    problem: 'Operations teams in fintech/remittance need to query live transaction data and internal docs without writing SQL or filing tickets to analytics teams.',
+    description: 'AI-assisted operational intelligence platform for enterprise remittance systems. Features a Text-to-SQL pipeline (NL → validated SQL → streamed explanation) over a real 65-column fintech schema, a hybrid RAG pipeline (BM25 + vector + RRF) over internal runbooks with RAGAS evaluation (context_recall 0.865), LLM observability via Langfuse, and a React dashboard with live transaction metrics.',
+    tech: ['Python', 'FastAPI', 'Claude claude-opus-4-6', 'ChromaDB', 'BM25', 'PostgreSQL', 'React', 'TypeScript', 'Langfuse', 'Docker', 'Render', 'Vercel', 'Neon'],
+    github: 'https://github.com/thanhnv2210/ai-operations-portal',
+    live: 'https://aiops.thanhnguyen.dev',
+    image: null,
+  },
+  {
     slug: 'freelancer-copilot',
     title: 'Freelancer Copilot',
     status: 'in-progress' as const,
