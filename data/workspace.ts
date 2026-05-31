@@ -103,6 +103,16 @@ export const workspaceApps: WorkspaceApp[] = [
     command: 'pnpm dev',
   },
   {
+    name: 'ai-agent-workflow',
+    path: 'AI_WS/ai-agent-workflow',
+    port: 3013,
+    url: 'http://localhost:3013',
+    stack: ['React 19', 'Vite', 'React Flow', 'FastAPI', 'Claude API'],
+    description: 'NL-to-workflow diagram tool — type a description, Claude generates the flow, React Flow renders it interactively.',
+    status: 'in-progress',
+    command: 'pnpm dev',
+  },
+  {
     name: 'algo-coach-ai',
     path: 'AI_WS/algo-coach-ai',
     port: 3015,

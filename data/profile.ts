@@ -1,13 +1,17 @@
 export const profile = {
   name: 'Nguyen Van Thanh',
   title: 'Senior Backend & Cloud Engineer',
+  titles: [
+    'Senior Backend & Cloud Engineer',
+    'AI Engineer / Solution Architect',
+  ],
   email: 'thanhnv1022@gmail.com',
   phone: '+65 8433 8479',
   linkedin: 'https://linkedin.com/in/thanhnv2210',
   github: 'https://github.com/thanhnv-freelance',
   upwork: 'https://upwork.com/freelancers/thanhnv2210',
   summary:
-    '10+ years designing and building large-scale distributed systems for banking, fintech, and enterprise platforms. Specialized in Spring Boot microservices, AWS, high-volume payment & remittance systems, and event-driven architectures.',
+    '10+ years designing and building large-scale distributed systems for banking, fintech, and enterprise platforms. Specialized in Spring Boot microservices, AWS, high-volume payment & remittance systems, and event-driven architectures. Currently transitioning into AI engineering — building RAG pipelines, LLM-powered tools, and agentic AI systems.',
   availability: 'Available for freelance & contract',
   resume: '/resume.pdf',
 }
@@ -15,8 +19,21 @@ export const profile = {
 export const skills = {
   backend: ['Java', 'Spring Boot', 'Spring WebFlux', 'REST APIs', 'SOAP APIs', 'Microservices', 'Event-driven systems', 'Transaction processing'],
   cloud: ['AWS (EC2, S3, RDS, Lambda, API Gateway)', 'Docker', 'Kubernetes', 'CI/CD', 'Production monitoring & observability'],
-  databases: ['PostgreSQL', 'Oracle', 'MySQL', 'DB2'],
+  databases: ['PostgreSQL', 'Oracle', 'MySQL', 'DB2', 'pgvector'],
   systemDesign: ['Distributed systems', 'Scalable backend design', 'Integration architecture', 'Workflow/BPM systems'],
+  ai: [
+    { name: 'Claude API / Anthropic SDK', level: 3 },
+    { name: 'RAG Pipeline Engineering', level: 3 },
+    { name: 'LLM Streaming', level: 3 },
+    { name: 'Python / FastAPI', level: 2 },
+    { name: 'Vercel AI SDK', level: 2 },
+    { name: 'Text-to-SQL (NL-to-SQL)', level: 2 },
+    { name: 'pgvector / Semantic Search', level: 2 },
+    { name: 'Langfuse (LLM Observability)', level: 2 },
+    { name: 'RAGAS Evaluation', level: 2 },
+    { name: 'Agentic AI / Tool Use', level: 1 },
+    { name: 'React Flow (Workflow Diagrams)', level: 1 },
+  ],
 }
 
 export const experience = [
@@ -83,7 +100,7 @@ export const projects = [
     status: 'production' as const,
     problem: 'Operations teams in fintech/remittance need to query live transaction data and internal docs without writing SQL or filing tickets to analytics teams.',
     description: 'AI-assisted operational intelligence platform for enterprise remittance systems. Features a Text-to-SQL pipeline (NL → validated SQL → streamed explanation) over a real 65-column fintech schema, a hybrid RAG pipeline (BM25 + vector + RRF) over internal runbooks with RAGAS evaluation (context_recall 0.865), LLM observability via Langfuse, and a React dashboard with live transaction metrics.',
-    tech: ['Python', 'FastAPI', 'Claude claude-opus-4-6', 'ChromaDB', 'BM25', 'PostgreSQL', 'React', 'TypeScript', 'Langfuse', 'Docker', 'Render', 'Vercel', 'Neon'],
+    tech: ['Python', 'FastAPI', 'Claude API', 'ChromaDB', 'BM25', 'PostgreSQL', 'React', 'TypeScript', 'Langfuse', 'Docker', 'Render', 'Vercel', 'Neon'],
     github: 'https://github.com/thanhnv2210/ai-operations-portal',
     live: 'https://aiops.thanhnguyen.dev',
     image: null,
@@ -91,13 +108,35 @@ export const projects = [
   {
     slug: 'freelancer-copilot',
     title: 'Freelancer Copilot',
-    status: 'in-progress' as const,
-    problem: 'Manual job hunting on Upwork is slow and unstructured — no way to systematically score fit or track pipeline performance.',
-    description: 'AI-powered freelancing assistant that analyzes job opportunities, scores project fit, generates proposal strategies, and tracks applications.',
-    tech: ['Next.js', 'PostgreSQL', 'OpenAI API'],
+    status: 'production' as const,
+    problem: 'Manual job hunting on Upwork is slow and unstructured — no way to systematically score fit, generate tailored proposals, or track pipeline performance.',
+    description: 'Full-stack AI-powered freelancing platform covering the entire proposal pipeline: job scoring engine, AI proposal generator with streaming, application tracker, analytics dashboard, weekly digest cron job, and browser extension import endpoint. Six phases delivered end-to-end.',
+    tech: ['Next.js 16', 'PostgreSQL', 'Drizzle ORM', 'Claude API', 'Vercel AI SDK', 'NextAuth', 'Recharts', 'TypeScript'],
     github: 'https://github.com/thanhnv2210/freelancer-copilot',
+    live: 'https://freelancer.thanhnguyen.dev',
+    image: null,
+  },
+  {
+    slug: 'ai-agent-workflow',
+    title: 'AI Agent Workflow',
+    status: 'in-progress' as const,
+    problem: 'Engineers and product teams spend significant time manually drawing workflow diagrams that could be generated directly from plain-English descriptions.',
+    description: 'NL-to-diagram tool that converts plain English descriptions into interactive, editable workflow diagrams. Claude generates structured JSON, React Flow renders it with dagre auto-layout, and users can drag, edit, and save named snapshots. Demonstrates agentic AI and Claude tool use — the dominant signal in AI Engineer job descriptions.',
+    tech: ['React 19', 'Vite', 'React Flow', 'Claude API', 'Python', 'FastAPI', 'TailwindCSS v4', 'TypeScript', 'Zod'],
+    github: 'https://github.com/thanhnv2210/ai-agent-workflow',
     live: null,
-    image: null, // add: '/images/projects/freelancer-copilot.png'
+    image: null,
+  },
+  {
+    slug: 'career-growth-copilot',
+    title: 'Career Growth Copilot',
+    status: 'in-progress' as const,
+    problem: 'Engineers lack a structured system to track skills, projects, and learning progress — making it hard to articulate growth or identify gaps when targeting senior or architect roles.',
+    description: 'AI-powered career tracker for engineers — skill and project logging, learning journal with AI-generated career recommendations. Built as the active career intelligence tool while targeting AI Engineer and Solution Architect roles. Uses pgvector for semantic skill matching and the Vercel AI SDK for coaching responses.',
+    tech: ['Next.js 16', 'PostgreSQL', 'Drizzle ORM', 'Claude API', 'Vercel AI SDK', 'NextAuth', 'Recharts', 'TypeScript'],
+    github: null,
+    live: null,
+    image: null,
   },
   {
     slug: 'remittance-platform',
@@ -108,7 +147,7 @@ export const projects = [
     tech: ['Java', 'Spring Boot', 'AWS', 'PostgreSQL'],
     github: null,
     live: null,
-    image: null, // add: '/images/projects/remittance-platform.png'
+    image: null,
   },
   {
     slug: 'banking-bpm',
@@ -119,6 +158,6 @@ export const projects = [
     tech: ['Java', 'Spring Boot', 'BPM', 'Oracle'],
     github: null,
     live: null,
-    image: null, // add: '/images/projects/banking-bpm.png'
+    image: null,
   },
 ]

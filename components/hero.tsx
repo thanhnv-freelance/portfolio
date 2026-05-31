@@ -1,5 +1,6 @@
 import { Code2, Briefcase, Globe, Mail, FileDown } from 'lucide-react'
 import { profile } from '@/data/profile'
+import { cn } from '@/lib/utils'
 
 const links = [
   {
@@ -40,10 +41,17 @@ export function Hero() {
         Nguyen Van Thanh
       </h1>
 
-      {/* Title */}
-      <p className="mt-3 text-lg sm:text-xl font-mono text-muted-foreground">
-        Senior Backend &amp; Cloud Engineer
-      </p>
+      {/* Titles */}
+      <div className="mt-3 flex flex-col gap-1">
+        <p className="text-lg sm:text-xl font-mono text-foreground">
+          {profile.titles[0]}
+        </p>
+        <p className="text-sm font-mono text-muted-foreground flex items-center gap-2">
+          <span className="opacity-40">↳</span>
+          Transitioning to:{' '}
+          <span className={cn('text-muted-foreground/80')}>{profile.titles[1]}</span>
+        </p>
+      </div>
 
       {/* Bio */}
       <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
@@ -52,7 +60,10 @@ export function Hero() {
         <span className="text-foreground font-medium">Spring Boot microservices</span>,{' '}
         <span className="text-foreground font-medium">AWS</span>, high-volume{' '}
         <span className="text-foreground font-medium">payment &amp; remittance systems</span>,
-        and event-driven architectures.
+        and event-driven architectures. Currently building{' '}
+        <span className="text-foreground font-medium">RAG pipelines</span>,{' '}
+        <span className="text-foreground font-medium">LLM-powered tools</span>, and{' '}
+        <span className="text-foreground font-medium">agentic AI systems</span>.
       </p>
 
       {/* Links */}
