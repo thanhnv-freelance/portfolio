@@ -102,4 +102,14 @@ export const workspaceApps: WorkspaceApp[] = [
     status: 'in-progress',
     command: 'pnpm dev',
   },
+  {
+    name: 'algo-coach-ai',
+    path: 'AI_WS/algo-coach-ai',
+    port: 3015,
+    url: 'http://localhost:3015',
+    stack: ['Next.js 16', 'TailwindCSS v4', 'Drizzle ORM', 'Vercel AI SDK'],
+    description: 'Personal algorithm interview prep — theory reference, progress tracking, and AI coaching via Claude.',
+    status: 'in-progress',
+    command: 'pnpm dev',
+  },
 ]

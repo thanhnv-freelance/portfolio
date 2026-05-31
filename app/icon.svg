@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#0c0718"/>
+  <!-- < left angle bracket -->
+  <polyline points="19,13 9,24 19,35"
+            stroke="#7c3aed" stroke-width="3.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- > right angle bracket -->
+  <polyline points="29,13 39,24 29,35"
+            stroke="#7c3aed" stroke-width="3.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- / forward slash -->
+  <line x1="28" y1="11" x2="20" y2="37"
+        stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/>
+</svg>
