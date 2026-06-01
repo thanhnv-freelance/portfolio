@@ -58,15 +58,7 @@
   --radius-xl: calc(var(--radius) * 1.4);
 }
 
-/* ── Font size strategy ─────────────────────────────────────────────────────
-   Controlled via data-font-size attribute on <html>.
-   Persisted to localStorage under portfolio:font-size.
-   Auto-detected from screen.width on first visit.
-   ─────────────────────────────────────────────────────────────────────────── */
-html                           { font-size: 20px; }
-html[data-font-size="small"]   { font-size: 14px; }
-html[data-font-size="default"] { font-size: 20px; }
-html[data-font-size="large"]   { font-size: 26px; }
+html { font-size: 16px; }
 
 @layer base {
   * {
