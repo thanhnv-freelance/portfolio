@@ -3,6 +3,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { useTheme, type FontSize } from '@/components/theme-provider'
+import { cn } from '@/lib/utils'
+
+const FONT_SIZES: { value: FontSize; label: string }[] = [
+  { value: 'small',   label: 'S' },
+  { value: 'default', label: 'M' },
+  { value: 'large',   label: 'L' },
+]
 
 const navLinks = [
   { label: 'About', href: '/about' },
@@ -13,6 +21,7 @@ const navLinks = [
 
 export function Navbar() {
   const pathname = usePathname()
+  const { fontSize, setFontSize } = useTheme()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
@@ -50,7 +59,21 @@ export function Navbar() {
               </Link>
             )
           })}
-          <div className="ml-1">
+          <div className="flex items-center gap-1 ml-1">
+            {FONT_SIZES.map(({ value, label }) => (
+              <button
+                key={value}
+                onClick={() => setFontSize(value)}
+                className={cn(
+                  'w-6 h-6 rounded text-xs font-medium transition-colors',
+                  fontSize === value
+                    ? 'bg-subtle text-foreground'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-subtle'
+                )}
+              >
+                {label}
+              </button>
+            ))}
             <ThemeToggle />
           </div>
         </div>

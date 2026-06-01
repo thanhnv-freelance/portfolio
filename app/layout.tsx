@@ -58,7 +58,7 @@ export default function RootLayout({
         {/* Prevent flash of unstyled content — runs before hydration */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{if(localStorage.getItem('theme')!=='light')document.documentElement.classList.add('dark')}catch(e){document.documentElement.classList.add('dark')}})()`
+            __html: `(function(){try{if(localStorage.getItem('theme')!=='light')document.documentElement.classList.add('dark');var s=localStorage.getItem('portfolio:font-size');if(s!=='small'&&s!=='default'&&s!=='large'){var w=window.screen.width;s=w<1280?'small':w>=2560?'large':'default'}document.documentElement.setAttribute('data-font-size',s)}catch(e){document.documentElement.classList.add('dark');document.documentElement.setAttribute('data-font-size','default')}})()`
           }}
         />
       </head>
