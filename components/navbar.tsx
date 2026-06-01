@@ -50,7 +50,7 @@ export function Navbar() {
               </Link>
             )
           })}
-          <div className="flex items-center gap-1 ml-1">
+          <div className="hidden sm:flex items-center gap-1 ml-1">
             <ThemeToggle />
           </div>
         </div>
