@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = 'https://portfolio-jade-kappa-64.vercel.app'
+const siteUrl = 'https://thanhnguyen.dev'
 const title = 'Nguyen Van Thanh — Senior Backend & Cloud Engineer'
 const description =
   'Senior Backend & Cloud Engineer with 10+ years building large-scale distributed systems for banking, fintech, and enterprise platforms. Specialized in Spring Boot microservices, AWS, payment systems, and event-driven architecture.'
