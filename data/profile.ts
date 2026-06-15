@@ -139,6 +139,17 @@ export const projects = [
     image: null,
   },
   {
+    slug: 'irrigation-control-system',
+    title: 'Smart Irrigation Control System',
+    status: 'production' as const,
+    problem: 'Manual watering for a multi-zone balcony garden was inconsistent and unreliable — no way to automate schedules, monitor soil moisture remotely, or react to offline events.',
+    description: 'End-to-end IoT system using ESP32 firmware (Arduino C++), Firebase RTDB as a serverless command bus, and a React PWA. Designed a non-blocking millis-based firmware event loop, dual poll+stream command channel for reliability on unstable WiFi, and a zone-isolated multi-device Firebase schema. Includes hardware safety cutoffs (10-min valve max, relay-HIGH init on boot), Firebase watchdog with auto-reboot, captive portal WiFi provisioning, and Telegram alerting for low moisture and offline events.',
+    tech: ['ESP32', 'Arduino C++', 'Firebase RTDB', 'React 18', 'Vite', 'PWA', 'Telegram Bot API', 'Vercel'],
+    github: null,
+    live: 'https://irrigation.thanhnguyen.dev',
+    image: null,
+  },
+  {
     slug: 'remittance-platform',
     title: 'Cross-Border Remittance Platform',
     status: 'production' as const,
