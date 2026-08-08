@@ -26,7 +26,7 @@ export default function ProjectsPage() {
       </h1>
 
       <div className="flex flex-col gap-6">
-        {projects.map((project) => (
+        {[...projects].sort((a, b) => a.order - b.order).map((project) => (
           <div
             key={project.slug}
             className="border border-border rounded-xl p-6 sm:p-8 bg-card flex flex-col gap-5"
