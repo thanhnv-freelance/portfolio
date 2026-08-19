@@ -122,4 +122,14 @@ export const workspaceApps: WorkspaceApp[] = [
     status: 'in-progress',
     command: 'pnpm dev',
   },
+  {
+    name: 'english-speaking-practice',
+    path: 'AI_WS/english-learning-app/apps/chrome-extension',
+    port: null,
+    url: null,
+    stack: ['Chrome Extension MV3', 'Web Speech API', 'MediaRecorder API'],
+    description: 'Chrome extension — select any text on any webpage and practice reading it aloud. Word-by-word accuracy comparison, karaoke highlighting, session history, and pause/resume recording.',
+    status: 'active',
+    command: 'Load unpacked in chrome://extensions',
+  },
 ]
